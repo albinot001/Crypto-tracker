@@ -1,0 +1,41 @@
+.crypto-details {
+    margin: 20px;
+    padding: 20px;
+    background: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .crypto-details h1, .crypto-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .price-section {
+    margin-bottom: 20px;
+  }
+  
+  .market-data {
+    margin-bottom: 20px;
+  }
+  
+  .market-data p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .description {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  
+  canvas {
+    width: 100% !important;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+  

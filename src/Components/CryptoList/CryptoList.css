@@ -1,0 +1,281 @@
+.crypto-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.crypto-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1000px;
+  margin-bottom: 20px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.search-container {
+  position: relative;
+  transition: all 0.3s ease;
+  margin-right: 10px;
+}
+
+.search-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+.search-container input {
+  width: 0;
+  opacity: 0;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.search-container.expanded input {
+  width: 300px;
+  opacity: 1;
+  background-color: black;
+  color: white;
+}
+
+.favorites-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.favorites-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+}
+
+.favorites-link {
+  text-decoration: none;
+}
+
+.favorites-tooltip {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  display: none;
+}
+
+.favorites-container.expanded .favorites-tooltip {
+  display: block;
+}
+
+.crypto-list {
+  width: 80%;
+  max-width: 1000px;
+}
+
+.crypto-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer; /* Added cursor for sortability */
+}
+
+.header-row {
+  font-weight: bold;
+  background-color: #333;
+  text-align: center;
+  cursor: pointer; /* Indicates the header is sortable */
+  margin-bottom: 20px; /* Add gap from coins cards */
+  padding: 10px; /* Add padding to the header row for better spacing */
+}
+
+.crypto-card {
+  background: #1e1e1e;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none; /* Remove underline from link */
+}
+
+.crypto-card:hover {
+  transform: translateY(-5px);
+}
+
+.crypto-list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.crypto-list-row span {
+  flex: 1;
+  text-align: center;
+}
+
+.crypto-header-row span:nth-child(1),
+.crypto-list-row span:nth-child(1) {
+  flex: 0.5;
+}
+
+.crypto-header-row span:nth-child(2),
+.crypto-list-row span:nth-child(2) {
+  flex: 0.8;
+}
+
+.crypto-header-row span:nth-child(3),
+.crypto-list-row span:nth-child(3) {
+  flex: 2;
+}
+
+.crypto-header-row span:nth-child(4),
+.crypto-list-row span:nth-child(4) {
+  flex: 1.5;
+}
+
+.crypto-header-row span:nth-child(5),
+.crypto-list-row span:nth-child(5) {
+  flex: 1.5;
+}
+
+.crypto-header-row span:nth-child(6),
+.crypto-list-row span:nth-child(6) {
+  flex: 2;
+}
+
+.favorite-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.price-change.positive {
+  color: #4caf50;
+}
+
+.price-change.negative {
+  color: #f44336;
+}
+
+.crypto-chart-container {
+  width: 100px;
+  height: 50px;
+}
+
+.crypto-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.header-buttons .favorites-container,
+.header-buttons .search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-buttons .favorites-container .favorites-icon,
+.header-buttons .search-container .search-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  margin-left: 10px;
+}
+
+.header-buttons .search-bar {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 0;
+  background-color: black;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.search-container.expanded .search-bar {
+  display: block;
+  width: 300px;
+  opacity: 1;
+}
+
+.header-buttons .favorites-container:hover .favorites-tooltip,
+.header-buttons .search-container:hover .search-bar {
+  display: block;
+}
+
+.header-buttons .favorites-container .favorites-tooltip {
+  display: none;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-color: black;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.header-buttons .favorites-container.expanded .favorites-tooltip {
+  display: block;
+}
+
+.header-buttons .search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.header-buttons .search-icon {
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  margin-left: 10px;
+}
+
+.header-buttons .search-bar {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  width: 0;
+  background-color: black;
+  color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.search-container.expanded .search-bar {
+  display: block;
+  width: 300px;
+  opacity: 1;
+}
